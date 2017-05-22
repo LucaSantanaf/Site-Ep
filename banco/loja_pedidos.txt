@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS 'loja_pedidos'(
+'id' int(11) NOT NULL AUTO_INCREMENT,
+'id_cliente' int(11) NOT NULL,
+'valor_total' decimal(10,5) NOT NULL,
+'status' int(11) NOT NULL,
+'criado' datetime NOT NULL,
+'modificado' datetime NOT NULL,
+'tipo_frete' varchar(20) NOT NULL,
+'valor_frete' decimal(10,5) NOT NULL,
+PRIMARY KEY (id)
+);

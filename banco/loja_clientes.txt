@@ -1,0 +1,20 @@
+CREATE TABLE 'loja_clientes'(
+'id_cliente' int(11) NOT NULL AUTO_INCREMENT,
+'imagem' varchar(150) NOT NULL,
+'nome' varchar(200) NOT NULL,
+'sobrenome' varchar(200) NOT NULL,
+'email' varchar(200) NOT NULL,
+'telefone' varchar(100) NOT NULL,
+'cpf' varchar(11) NOT NULL,
+'rua' varchar(200) NOT NULL,
+'numero' varchar(200) NOT NULL,
+'complemento' varchar(150) NOT NULL,
+'bairro' varchar(100) NOT NULL,
+'cidade' varchar(100) NOT NULL,
+'uf' varchar(2) NOT NULL,
+'cep' varchar(30) NOT NULL,
+'email_log' varchar(200) NOT NULL,
+'senha_log' varchar(200) NOT NULL,
+'datalog' datetime NOT NULL,
+primary key(id_cliente)
+);

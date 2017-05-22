@@ -1,0 +1,4 @@
+CREATE TABLE 'loja_configs'(
+'manutencao' int(11) NOT NULL,
+'visitas' int(11) NOT NULL
+);

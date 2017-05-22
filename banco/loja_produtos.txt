@@ -1,0 +1,16 @@
+CREATE TABLE 'loja_produtos'(
+'id' int(11) NOT NULL AUTO_INCREMENT,
+'img_padrao' varchar(200) NOT NULL,
+'titulo' varchar(200) NOT NULL,
+'slug' varchar(200) NOT NULL,
+'categoria' varchar(200) NOT NULL,
+'subcategoria' varchar(200) NOT NULL,
+'valor_anterior' varchar(20) NOT NULL,
+'valor_atual' varchar(20) NOT NULL,
+'descricao' text NOT NULL,
+'peso' varchar(50) NOT NULL,
+'estoque' int(11) NOT NULL,
+'qtdVendidos' int(11) NOT NULL,
+'data' datetime NOT NULL,
+primary key(id)
+);

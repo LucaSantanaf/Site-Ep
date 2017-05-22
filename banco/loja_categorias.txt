@@ -1,0 +1,7 @@
+CREATE TABLE 'loja_categorias'(
+'id' INT NOT NULL AUTO_INCREMENT,
+'titulo' varchar(200) NOT NULL,
+'slug' varchar(200) NOT NULL,
+'views' int(11) NOT NULL,
+primary key(id)
+);

@@ -1,0 +1,988 @@
+*{
+	margin:0; padding:0;
+}
+body{
+	background:#f4f4f4 url(../images/loja_bg.jpg) top left repeat;
+	text-align:center;
+}
+a{text-decoration:none; color:#333;}
+a:hover{color:#096;}
+
+/*RESET*/
+div#box{
+	width:1000px;
+	margin:0 auto;
+}
+p#aviso{
+	float:left;
+	padding:6px;
+	background:#FFFFC4;
+	border:1px solid #FFFF15;
+	font:16px Tahoma, Geneva, sans-serif;
+	color:#666;
+	width:99%;
+	margin-bottom:5px;
+	text-align:left;
+}
+p#ok{
+	float:left;
+	padding:6px;
+	background:#97FF97;
+	border:1px solid  #060;
+	font:16px Tahoma, Geneva, sans-serif;
+	color:#666;
+	width:99%;
+	margin-bottom:5px;
+	text-align:left;
+}
+a#logout{float:left; width:50px; height:20px;text-align:center; margin-right:12px; background:#FF8080; color:#fff; font-weight:bold;}
+a#logout:hover{background:#900;}
+/*BARRA*/
+div#barra_top{
+	float:left;
+	width:1000px;
+	height:34px;
+	border-bottom:1px solid #333;
+	text-align:left;
+}
+div#barra_top img{float:left; margin-top:5px; margin-right:5px;}
+div#barra_top a{float:left; padding:0 5px; margin-top:4px;}
+div#barra_top span#hours{float:right; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#333; font-weight:bold; margin-top:6px; margin-right:4px;}
+div#barra_top form{width:470px; float:left; margin-top:4px; margin-right:6px;}
+div#barra_top form label{float:left; margin-right:6px;}
+div#barra_top form label span{font:15px Tahoma, Geneva, sans-serif; color:#666; float:left; margin-right:5px; margin-top:3px;}
+div#barra_top form label input{float:left; padding:4px; background:#fff; border:1px solid #333; outline:none;}
+div#barra_top form input[type=submit]{float:left; padding:3px 8px; background:#06C; border:1px solid #fff; font:15px Tahoma, Geneva, sans-serif; color:#fff; text-shadow:#000 0 1px 0; font-weight:bold;}
+div#barra_top form input[type=submit]:hover{cursor:pointer; background:#09f;}
+div#barra_top form label input:focus{background:#f5f5f5;}
+/*HEADER*/
+div#header{
+	float:left;
+	width:1000px;
+	height:100px;
+}
+div#header img#logomarca{
+	float:left;
+	width:140px;
+	height:50px;
+	margin:15px;
+	margin-bottom:0;
+	margin-top:20px;
+}
+div#header div.wellcome{
+	float:right;
+	margin:10px;
+	margin-top:30px;
+	margin-right:15px;
+	height:40px;
+	width:430px;
+	text-align:right;
+}
+div#header div.wellcome span{
+	font:15px Tahoma, Geneva, sans-serif;
+	color:#333;
+	float:right;
+	margin-top:8px;
+}
+div#header div.wellcome img#user{
+	float:right;
+	margin-left:10px;
+}
+div#header div.wellcome a{text-decoration:underline; font-weight:bold;}
+/*SEARCH*/
+div#search{
+	float:left;
+	width:1000px;
+	height:53px;
+	background:url(../images/loja_search.png) top left no-repeat;
+	text-align:left;
+}
+div#search form{
+	float:left;
+	margin-top:22px;
+	margin-left:65px;
+	width:830px;
+}
+div#search form span{
+	float:left;
+	font:18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:#000 0 1px 0;
+	margin-right:15px;
+}
+div#search form label{float:left;}
+div#search input[type=text]{
+	border:1px solid #333;
+	padding:0 5px;
+	background:#fff url(../images/loja_bg_input.jpg) top left repeat-x;
+	height:26px;
+	width:620px;
+	margin-top:-1px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	font:15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#999;
+	font-weight:bold;
+	outline:none;
+}
+div#search input[type=submit]{
+	width:48px;
+	height:27px;
+	background:url(../images/loja_btn_ok.png) top left no-repeat;
+	border:0;
+	margin-left:5px;
+	float:right;
+}
+div#search input[type=submit]:hover{
+	background-position:0 -27px;
+	cursor:pointer;
+}
+
+/*COMEÇA O ESTILO DO CONTEUDO*/
+div#conteudo{
+	float:left;
+	width:965px;
+	margin-left:15px;
+	margin-top:5px;
+}
+
+div#conteudo div#banner_principal{
+	float:left;
+	width:965px;
+	height:220px;
+}
+div#banner_principal span#paginator{
+	float:left;
+	width:77px;
+	height:220px;
+}
+div#banner_principal div#imagens_slide{
+	float:right;
+	width:885px;
+	height:220px;
+	background:#069;
+	overflow:hidden;
+}
+
+div#banner_principal span#paginator a{
+	padding:13px 0;
+	background:#09f;
+	border-left:4px solid #069;
+	float:left;
+	display:block;
+	width:72px;
+	font:23px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	font-weight:bold;
+	margin-bottom:3px;
+}
+div#banner_principal span#paginator a:last-child{margin-bottom:0; padding:10px 0; margin-top:1px;} 
+div#banner_principal span#paginator a:hover{background:#06C;}
+div#banner_principal span#paginator a.activeSlide{background:#036; border-color:#09f;}
+div#imagens_slide ul{
+	margin:0;
+	padding:0;
+}
+div#imagens_slide li{width:885px; height:220px; position:relative;}
+div#imagens_slide li div.descricao{
+	position:absolute;
+	z-index:99;
+	width:450px;
+	padding:5px;
+	background:url(../images/loja_bg_desc.png) top left repeat;
+	right:5px;
+	bottom:5px;
+	text-align:left;
+}
+div#imagens_slide div.descricao span{
+	font:17px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#fff;
+	float:left;
+	width:100%;
+	margin-bottom:4px;
+	margin-left:3px;
+}
+div#imagens_slide div.descricao p{font:14px Tahoma, Geneva, sans-serif; color:#fff; float:left;margin-bottom:3px; margin-left:3px;}
+
+
+/*BLOCO DOIS/twitter, facebook, e vídeo institucional*/
+div#bloco_dois{
+	float:left;
+	width:965px;
+	padding:5px 0;
+	padding-top:10px;
+	border:3px solid #333;
+	border-left:0;
+	border-right:0;
+	margin-top:8px;
+}
+div#bloco_dois.in-page{border-bottom:0; margin-left:15px;}
+div#bloco_dois div#box_twitter{
+	float:left;
+	width:270px;
+	height:250px;
+	margin-right:5px;
+}
+div#bloco_dois div#box_facebook{
+	float:left;
+	width:300px;
+	background:#fff;
+	height:250px;
+	margin-right:5px;
+}
+
+div#bloco_dois div#box_video{
+	float:left;
+	width:378px;
+	background:#fff;
+	height:248px;
+	margin-right:5px;
+	border:1px solid #666;
+}
+div#box_video h2{
+	font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#666;
+	font-weight:bold;
+	text-align:left;
+	float:left;
+	padding:4px;
+	padding-left:35px;
+	margin:3px;
+	width:333px;
+	position:relative;
+}
+div#box_video h2 img{
+	position:absolute;
+	left:-10px;
+	top:-15px;
+}
+div#box_video div.video{
+	float:left;
+	background:#333;
+	width:370px;
+	height:208px;
+	margin-left:4px;
+}
+
+/*MENU QUE FICARA NA SIDEBAR DO SITE*/
+div#sidebar_menu{
+	float:left;
+	width:250px;
+	background:#fff;
+	border:1px solid #666;
+	margin-top:5px;
+}
+div#sidebar_menu h2{
+	font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#666;
+	text-transform:uppercase;
+	font-weight:bold;
+	padding:5px 0;
+	float:left;
+	width:250px;
+	background:#f4f4f4;
+	border-bottom:1px solid #666;
+}
+div#sidebar_menu ul{float:left; text-align:left; margin:0;}
+div#sidebar_menu ul li{
+	width:240px;
+	float:left;
+	display:block;
+	padding:4px;
+}
+div#sidebar_menu ul li a{font:14px Tahoma, Geneva, sans-serif; color:#666; display:block;}
+div#sidebar_menu ul li ul{display:none; background:#f4f4f4; margin-top:4px;}
+div#sidebar_menu ul li ul li{width:230px; padding:5px 0; padding-left:3px; margin-left:2px;}
+div#sidebar_menu ul li ul li:hover{background:#ebebeb;}
+div#sidebar_menu ul li ul li:hover a{color:#333;}
+div#sidebar_menu ul li img{float:left; margin-right:10px; mergin-left:3px; margin-top:4px;}
+div#sidebar_menu ul li:hover ul{display:block;}
+
+/*CONTEUDO PARA OS PRODUTOS*/
+div#content_produtos{
+	float:right;
+	width:710px;
+	margin-top:5px;
+	text-align:left;
+}
+div#content_produtos.page_erro{width:960px;}
+div#content_produtos div#produtos{float:left; padding-left:4px; padding-bottom:5px;}
+div#content_produtos h1{
+	float:left;
+	font:25px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#666;
+	padding-bottom:4px;
+	border-bottom:2px double #333;
+	margin:4px;
+	margin-bottom:15px;
+	width:702px;
+}
+div#content_produtos h1 img{float:left; margin-right:6px;}
+div#content_produtos div.produto_box{
+	float:left;
+	padding:4px;
+	background:#fff;
+	border:1px solid #333;
+	height:245px;
+	width:225px;
+	margin-left:-1px;
+	margin-top:-1px;
+	padding-bottom:6px;
+}
+div#content_produtos div.produto_box.erro{width:230px;}
+div#content_produtos div.produto_box:hover{background:#f5f5f5;}
+div#content_produtos div.produto_box div.imgProd{width:210px; height:120px; overflow:hidden; background:#fff; margin:7px;}
+div#content_produtos div.produto_box div.imgProd.erro{width:215px; background:#fff;}
+
+div#paginator{
+	float:left;
+	width:100%;
+	margin:5px 0;
+}
+div#paginator span.page, div#paginator a{
+	padding:4px 6px;
+	background:#fff;
+	border:1px solid #ccc;
+	float:left;
+	margin-right:6px;
+	font:14px Tahoma, Geneva, sans-serif;
+	color:#666;
+}
+div#paginator strong{float:left; padding:3px 6px; background:#09f; color:#fff; margin-right:6px;}
+div#paginator a:hover{background:#069; border-color:#036; color:#fff;}
+
+div.produto_box span.title{
+	font:15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#333;
+	text-align:center;
+	font-weight:bold;
+	display:block;
+}
+div.produto_box span.preco{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#093; font-weight:bold; margin:3px; text-align:center; display:block; width:100%;}
+div.produto_box a#cart{
+	float:left;
+	width:102px;
+	height:34px;
+	border:0;
+	background:url(../images/loja_comprar_btn.png) top left no-repeat;
+	margin-top:6px;
+	margin-left:63px;
+}
+div.produto_box a#cart:hover{background-position:0 -34px;}
+
+
+/*AQUI COMEÇA A DIV FOOTER*/
+div#footer{
+	width:965px;
+	height:90px;
+	margin:0 auto;
+	margin-top:5px;
+	border-top:2px solid #06c;
+	padding-top:5px;
+}
+div#footer div.atendimento{
+	float:left;
+	width:200px;
+	height:83px;
+	margin:4px;
+	margin-right:10px;
+	text-align:left;
+}
+div#footer span{font:17px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666; font-weight:bold; margin-left:4px; margin-bottom:5px; float:left; display:block; width:100%;}
+div#footer div.atendimento p{font:18px Tahoma, Geneva, sans-serif; color:#666; font-weight:bold; margin-left:4px; margin-bottom:2px;}
+div#footer div.emails{
+	float:left;
+	width:240px;
+	height:83px;
+	margin:4px;
+	margin-right:10px;
+	text-align:left;
+}
+div#footer div.emails p{font:18px Tahoma, Geneva, sans-serif; color:#666; font-weight:bold; margin-left:4px; margin-bottom:2px;}
+
+div#footer div.pagamentos{
+	float:right;
+	width:315px;
+	height:83px;
+	margin:4px;
+	text-align:left;
+}
+div#footer div.pagamentos img{
+	float:left;
+	margin-top:10px;
+}
+/**********************************************************
+	AQUI COMEÇA O CSS DA SINGLE
+*******************************************************/
+div#bloco_geral{
+	float:left;
+	width:965px;
+	padding:5px 0;
+}
+h1.title_dados{
+	font:26px Tahoma, Geneva, sans-serif;
+	color:#666;
+	padding-top:7px;
+	border-top:3px solid #666;
+	margin-top:5px;
+	margin-bottom:8px;
+	float:left;
+	text-align:left;
+	width:964px;
+}
+div#content_dados_produto{
+	float:left;
+	padding:4px;
+	background:#fff;
+	width:956px;
+	text-align:left;
+}
+div#content_dados_produto p{
+	font:15px "Trebuchet MS", tahoma, arial, helvetica;
+	color:#333;
+	width:100%;
+	float:left;
+	margin-bottom:5px;
+}
+div#content_dados_produto ol{
+	float:left;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:30px;
+	font:15px "Trebuchet MS", tahoma, arial, helvetica;
+	color:#333;
+}
+div#bloco_geral div#bloco_left{
+	float:left;
+	width:300px;
+	height:400px;
+
+}
+div#bloco_geral div#bloco_right{
+	float:right;
+	width:660px;
+}
+div#bloco_right h1.title{
+	font:22px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#666;
+	font-weight:bold;
+	float:left;
+	margin:5px 4px;
+	text-shadow:#000 0 1px 0;
+}
+
+div#bloco_right div#dados_produto{
+	float:left;
+	width:640px;
+	padding:5px;
+	background:#fff;
+	border:1px solid #ccc;
+	height:160px;
+	margin-left:4px;
+	position:relative;
+}
+div#dados_produto span.de{
+	float:left;
+	display:block;
+	width:100%;
+	text-align:left;
+	font:18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#CA0000;
+	text-shadow:#000 0 1px 1px;
+	margin-left:4px;
+}
+div#dados_produto span.exemplares{float:left; margin:4px; margin-top:40px; font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; text-align:left; width:70%;color:#666; font-weight:bold;}
+div#dados_produto span.por{
+	float:left;
+	display:block;
+	width:100%;
+	text-align:left;
+	font:26px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#090;
+	text-shadow:#000 0 1px 1px;
+	margin-left:4px;
+	margin-top:4px;
+}
+div#dados_produto div.qtd{position:absolute; right:5px; bottom:10px; width:200px; height:110px;}
+div#dados_produto span.parcelas{float:left; font:15px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666; margin:5px 0;}
+div.qtd label{display:block; text-align:left; float:left;}
+div.qtd label span{float:left; font:15px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666; font-weight:bold; margin-right:5px;}
+div.qtd label input{float:left; padding:4px; background:#fff; border:1px solid #666; width:50px; margin-left:5px; font:15px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666; text-align:center;}
+
+div.qtd input#btn_buy{
+	width:102px;
+	height:34px;
+	background:#ccc url(../images/loja_comprar_btn.png) top left no-repeat;
+	border:0;
+	float:right;
+	margin-top:38px;
+	cursor:pointer;
+}
+div.qtd input#btn_buy:hover{background-position:0 -34px;}
+
+
+div#bloco_right  h2.related{
+	float:left;
+	padding:5px;
+	background:#fff;
+	border:1px solid #666;
+	margin-top:5px;
+	width:640px;
+	text-align:left;
+	font:17px Tahoma, Geneva, sans-serif;
+	color:#666;
+	font-weight:bold;
+	margin-left:4px;
+}
+
+div#related{
+	float:left;
+	width:650px;
+	margin-left:4px;
+	margin-top:4px;
+	height:192px;
+}
+div#related div.prod_rel{
+	float:left;
+	width:147px;
+	padding:5px;
+	border:1px solid #ccc;
+	margin-top:3px;
+	margin-left:3px;
+	height:174px;
+	background:#fff;
+}
+div#related div.prod_rel:hover{border-color:#333;}
+div#related div.prod_rel img{
+	float:left;
+	width:143px;
+	height:80px;
+	background:#fff;
+	margin-left:2px;
+	margin-bottom:4px;
+}
+div#related div.prod_rel span.tit{
+	text-align:center;
+	font:14px Tahoma, Geneva, sans-serif;
+	color:#333;
+	display:block;
+}
+div#related div.prod_rel span{
+	font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#063;
+	font-weight:bold;
+	float:left;
+	display:block;
+	width:80%;
+	text-align:left;
+	margin-left:3px;
+}
+div#related div.prod_rel a#buy{
+	width:82px;
+	height:28px;
+	background:url(../images/loja_btn_comprar_small.png) top left no-repeat;
+	float:left;
+	margin-left:29px;
+	margin-top:7px;
+}
+div#related div.prod_rel a#buy:hover{background-position:0 -28px;}
+div#bloco_left div.img_big{
+	float:left;
+	width:300px;
+	height:208px;
+	background:#fff;
+	overflow:hidden;
+}
+div#bloco_left ul#gallery{
+	list-style-type:none;
+	float:left;
+	margin-top:3px;
+}
+div#bloco_left ul#gallery li{
+	width:97px;
+	height:67px;
+	background:#fff;
+	float:left;
+	margin-right:3px;
+	overflow:hidden;
+	margin-bottom:5px;
+}
+
+div#bloco_left a#enviar_amigo{
+	float:left;
+	width:143px;
+	height:27px;
+	background:url(../images/loja_btn_friend.png) top left no-repeat;
+	background-positoin:0 -1px;
+	margin-top:5px;
+}
+div#bloco_left a#enviar_amigo:hover{
+	height:26px;
+	background-position:0 -28px;
+}
+
+
+/*Pagina do carrinho de compras*/
+div#carrinho-page{
+	float:left;
+	width:965px;
+	text-align:left;
+}
+h1.title-page{
+	float:left;
+	width:965px;
+	font:25px Tahoma, Geneva, sans-serif;
+	color:#666;
+	text-align:left;
+	border-top:3px solid #666;
+	padding-top:10px;
+	margin-top:7px;
+	margin-bottom:15px;
+}
+h1.title-page img{float:left; margin-right:12px;}
+
+/*CARRINHO*/
+div#carrinho-page table.carrinho{
+	float:left;
+	border-collapse:collapse;
+	border:1px solid #333;
+	background:#fff;
+	width:100%;
+	text-align:center;
+}
+div#carrinho-page table.carrinho thead{
+	font:17px Tahoma, Geneva, sans-serif;
+	font-weight:normal;
+	color:#666;
+	background:#f5f5f5;
+	background:-moz-linear-gradient(top, #f5f5f5, #ccc);
+	background:-webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ccc));
+	background:linear-gradient(topo, #f5f5f5, #ccc);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#f5f5f5', EndColorStr='#d5d5d5');
+}
+div#carrinho-page table.carrinho thead tr th{padding:5px 0;}
+div#carrinho-page table.carrinho tbody{
+	font:16px Tahoma, Geneva, sans-serif;
+	color:#666;
+}
+div#carrinho-page table.carrinho tbody tr td{padding:5px 0;}
+div#carrinho-page table.carrinho tbody input{
+	padding:4px;
+	border:1px solid #ccc;
+	font:17px Tahoma, Geneva, sans-serif;
+	color:#ccc;
+	text-align:center;
+	outline:none;
+}
+div#carrinho-page table.carrinho tbody input:focus{border-color:#333;}
+div#carrinho-page table.carrinho tbody img#prodimg{
+	float:left;
+	margin-right:5px;
+	border:0;
+}
+div#carrinho-page table.carrinho tbody span{
+	float:left;
+	vertical-align:middle;
+	margin-top:25px;
+	font-size:18px;
+}
+div#carrinho-page table.carrinho tbody td.unitario{color:#09f; font-weight:bold;}
+div#carrinho-page table.carrinho tbody td.sub, td.total{color:#090; font-weight:bold;}
+div#carrinho-page table.carrinho tbody td.last{padding:12px 5px;}
+div#carrinho-page input#update{
+	float:left;
+	padding:5px;
+	background:#f5f5f5;
+	border:1px solid #ccc;
+	font:15px Tahoma, Geneva, sans-serif;
+	color:#666;
+	font-weight:bold;
+	margin-top:8px;
+	cursor:pointer;
+}
+div#carrinho-page input#update:hover{background:#333; color:#fff;}
+
+
+div#carrinho-page div#opcoes{
+	float:left;
+	padding:5px;
+	background:#fff;
+	border:1px solid #666;
+	margin-top:10px;
+	width:955px;
+}
+
+div#opcoes div.calcular{
+	float:left;
+	padding:4px;
+	width:400px;
+	text-align:left;
+}
+div#opcoes div.calcular form label{
+	display:block;
+	margin:5px 0;
+	float:left;
+	width:220px;
+}
+div#opcoes div.calcular form label span{
+	font:16px Tahoma, Geneva, sans-serif;
+	color:#666;
+	font-weight:bold;
+	margin-bottom:5px;
+	float:left;
+	width:220px;
+}
+div#opcoes div.calcular form label input[type=text]{float:left; margin:5px 0; padding:5px; border:1px solid #666; font:15px Tahoma, Geneva, sans-serif; color:#666;
+width:207px;}
+div#opcoes div.calcular form label select{display:block; width:218px; padding:5px; background:#fff; font:15px Tahoma, Geneva, sans-serif; color:#666;}
+div#opcoes div.calcular form input[type=submit]{
+	float:right;
+	padding:25px 20px;
+	vertical-align:middle;
+	margin-top:35px;
+	background:#069;
+	font:16px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:#000 0 1px 0;
+	border:1px solid #fff;
+	box-shadow:#000 0 1px 2px;
+}
+div#opcoes div.calcular form input[type=submit]:hover{cursor:pointer; background:#09f;}
+div#opcoes div#outros{
+	float:right;
+	padding:4px;
+	width:500px;
+	height:150px;
+}
+div#outros span#resultado-frete{
+	float:left;
+	padding:5px;
+	background:#ccc;
+	width:490px;
+	font:17px Tahoma, Geneva, sans-serif;
+	color:#333;
+	text-transform:uppsrcase;
+	text-align:center;
+}
+div#outros a#continuar{
+	padding:6px;
+	float:left;
+	background:#069;
+	border:1px solid #fff;
+	font:18px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	text-shadow:#000 0 1px 0;
+	box-shadow:#000 0 1px 2px;
+	margin-top:10px;
+}
+div#outros a#continuar:hover{background:#036;}
+div#outros a#finalizar{
+	padding:6px;
+	float:right;
+	background:#090;
+	border:1px solid #fff;
+	font:18px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	text-shadow:#000 0 1px 0;
+	box-shadow:#000 0 1px 2px;
+	margin-top:10px;
+}
+div#outros a#finalizar:hover{background:#060;}
+
+/************************************
+	Pagina de verificação
+***********************************/
+div#verification{
+	float:left;
+	width:949px;
+	background:#fff;
+	padding:8px;
+}
+div#verification span.spn-title{font:17px Tahoma, Geneva, sans-serif; color:#333; font-weight:bold; text-align:left; float:left; margin-bottom:9px; width:100%;}
+div#verification div.text{
+	float:left;
+	background:#f5f5f5;
+	padding:9px;
+	width:400px;
+}
+div#verification div.text p{
+	font:15px Tahoma, Geneva, sans-serif;
+	color:#666;
+	text-align:justify;
+	padding:4px 2px;
+	font-weight:bold;
+}
+div#verification div.text p a{float:right;}
+
+div#verification div.logar{
+	float:right;
+	padding:4px;
+	width:500px;
+	text-align:left;
+}
+div#verification div.logar label{
+	float:left;
+	display:block;
+	width:80%;
+	margin-bottom:4px;
+}
+div#verification div.logar label span{
+	float:left;
+	display:block;
+	width:80px;
+	margin:5px 0;
+	font:15px Tahoma, Geneva, sans-serif;
+	color:#666;
+}
+div#verification div.logar form{float:left; margin-top:5px;}
+div#verification div.logar label input{
+	width:300px;
+	padding:5px;
+	background:#fff;
+	border:1px solid #333;
+	float:left;
+	margin-left:5px;
+	outline:none;
+	font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#666;
+}
+div#verification div.logar input[type=submit]{
+	float:right;
+	width:95px;
+	height:65px;
+	background:#069;
+	border:1px solid #fff;
+	font:14px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:#000 0 1px 0;
+}
+div#verification div.logar input[type=submit]:hover{background:#036; cursor:pointer;}
+div#verification div.logar a{
+	float:left;
+	width:100%;
+}
+
+/*Cadastro de clientes*/
+div#cadastro_cliente{
+	float:left;
+	padding:5px;
+	background:#fff;
+	width:955px;
+}
+div#cadastro_cliente fieldset{
+	padding:10px;
+	border:1px solid #666;
+	text-align:left;
+	margin-bottom:6px;
+	padding-bottom:20px;
+}
+div#cadastro_cliente fieldset legend{
+	padding:6px;
+	background:#7A7A7A;
+	font:16px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:#000 0 1px 0;
+	width:180px;
+}
+div#cadastro_cliente label{display:block;}
+div#cadastro_cliente div.fix{
+	float:left;
+	width:920px;
+}
+div#cadastro_cliente div.fix label{
+	float:left;
+	display:inline-table;
+	width:450px;
+	margin-right:6px;
+}
+div#cadastro_cliente div.fix label span{
+	font:16px Tahoma, Geneva, sans-serif;
+	color:#666;
+	margin-bottom:8px;
+	float:left;
+	width:100%;
+}
+div#cadastro_cliente div.fix label input{
+	width:440px;
+	padding:6px;
+	background:#fff;
+	border:1px solid #666;
+	outline:none;
+	font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#666;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+
+div#cadastro_cliente label span{
+	font:16px Tahoma, Geneva, sans-serif;
+	color:#666;
+	margin-bottom:8px;
+	float:left;
+	width:100%;
+	margin-top:8px;
+}
+div#cadastro_cliente input:focus{background:#f5f5f5;}
+div#cadastro_cliente div.fix input:focus{background:#f5f5f5;}
+div#cadastro_cliente label input{
+	width:900px;
+	padding:6px;
+	background:#fff;
+	border:1px solid #666;
+	outline:none;
+	font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#666;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+div#cadastro_cliente label input.email{width:600px;}
+div#cadastro_cliente label input.email.menor{width:450px;}
+div#cadastro_cliente label.telefone{float:left; margin-right:9px; margin-left:0px;width:260px; }
+div#cadastro_cliente label.telefone input.num{width:280px;}
+
+div#cadastro_cliente label.email-label{float:left; width:620px;}
+div#cadastro_cliente label.email-label.menor{float:left; width:470px;}
+div#cadastro_cliente label.last{float:left; width:180px;}
+div#cadastro_cliente label.last input{width:162px;}
+div#cadastro_cliente label.telefone input{width:250px;}
+
+div#cadastro_cliente input[type=submit]{
+	float:left;
+	padding:10px 18px;
+	margin:5px;
+	background:#09f;
+	border:1px solid #333;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	font:19px Tahoma, Geneva, sans-serif;
+	color:#fff;
+	text-shadow:#000 0 1px 0;
+	cursor:pointer;
+}
+div#cadastro_cliente input[type=submit]:hover{background:#036; border-color:#fff;}
+
+
+/*Pagina de erro pagina 404*/
+div.content_erro{
+	float:left;
+	padding:5px;
+	width:955px;
+	margin-top:4px;
+	text-align:left;
+}
+div.content_erro p{
+	float:left;
+	width:100%;
+	font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#666;
+	margin-bottom:6px;
+}
+

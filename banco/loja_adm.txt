@@ -1,0 +1,11 @@
+CREATE TABLE 'loja_adm'(
+'id' int(11) NOT NULL AUTO_INCREMENT,
+'nome' varchar(200) NOT NULL,
+'sobrenome' varchar(200) NOT NULL,
+'email_log' varchar(200) NOT NULL,
+'senha_log' varchar(200) NOT NULL,
+'tipo' int(11) NOT NULL,
+'data_log' datetime NOT NULL,
+primary key(id)
+);
+ 
